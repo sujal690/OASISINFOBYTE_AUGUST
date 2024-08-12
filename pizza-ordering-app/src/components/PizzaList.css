@@ -1,0 +1,142 @@
+/* Header styling */
+h1 {
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: #FFD700; /* Gold color */
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500; /* Orange shadow */
+    margin: 0;
+    text-align: center;
+    animation: glowText 2s ease-in-out infinite alternate;
+  }
+  
+  /* Glow animation for header text */
+  @keyframes glowText {
+    0% {
+      text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500, 0 0 40px #FF4500;
+    }
+    100% {
+      text-shadow: 0 0 20px #FFD700, 0 0 30px #FF4500, 0 0 40px #FF4500, 0 0 50px #FF4500;
+    }
+  }
+  
+  /* Container for the pizza list */
+  .pizza-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    animation: fadeInList 1s ease-in-out;
+  }
+  
+  /* Fade-in animation for the pizza list */
+  @keyframes fadeInList {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Individual pizza item styling */
+  .pizza-item {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(255, 182, 193, 0.1)); /* Soft gradient overlay */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: popIn 0.6s ease-in-out;
+  }
+  
+  /* Pop-in animation for pizza items */
+  @keyframes popIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .pizza-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .pizza-item img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+  }
+  
+  .pizza-item h2 {
+    font-size: 1.5rem;
+    color: #FF4500; /* Bright orange for pizza names */
+    margin: 10px 0;
+    animation: bounceText 1s ease-in-out infinite alternate;
+  }
+  
+  /* Bounce animation for pizza names */
+  @keyframes bounceText {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .pizza-item p {
+    color: #FFD700; /* Light golden color for text */
+    margin: 5px 0;
+    animation: fadeInText 1s ease-in-out;
+  }
+  
+  /* Fade-in animation for text */
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .pizza-item button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: slideInButton 0.8s ease-in-out;
+  }
+  
+  /* Slide-in animation for buttons */
+  @keyframes slideInButton {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .pizza-item button:hover {
+    background: linear-gradient(135deg, #ff6a6a, #ff9a8b); /* Lighter gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  

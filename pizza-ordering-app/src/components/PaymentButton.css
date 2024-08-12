@@ -1,0 +1,197 @@
+.payment-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: hsla(32, 82%, 70%, 0.7);
+    border-radius: 12px;
+    max-width: 450px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+    animation: fadeIn 1s ease-in-out, moveIn 1.2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes moveIn {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .payment-details {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .payment-description {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    animation: slideIn 0.8s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    background: rgba(138, 238, 201, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeInOrder 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInOrder {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .order-item:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .order-item-icon {
+    margin-right: 15px;
+    font-size: 1.8rem;
+  }
+  
+  .order-item-label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #ffc107;
+  }
+  
+  .order-item-value {
+    color: #fff;
+  }
+  
+  .payment-amount {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4caf50;
+    animation: fadeInAmount 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeInAmount {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .password-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .password-input-container label {
+    color: #f2f2f2;
+    animation: fadeInLabel 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeInLabel {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .password-input-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 80%;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    animation: fadeInInput 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeInInput {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .payment-button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInButton 1s ease-in-out;
+  }
+  
+  @keyframes fadeInButton {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .payment-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    margin-top: 10px;
+  }
+  

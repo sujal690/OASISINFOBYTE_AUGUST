@@ -1,0 +1,122 @@
+/* OrderList.css */
+
+/* Container styling */
+.order-list-container {
+    position: relative;
+    background: linear-gradient(135deg, #9ff856, #b9fbc0, #65e672, #6ae9e2); /* Gradient background */
+    background-size: 400% 400%; /* Animation size */
+    animation: gradientAnimation 10s ease infinite; /* Gradient animation */
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    overflow: hidden;
+  }
+  
+  /* Background gradient animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  /* Toggle button styling */
+  .toggle-btn {
+    background: #4caf50; /* Green background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background: #388e3c; /* Darker green on hover */
+    transform: scale(1.05);
+  }
+  
+  .toggle-btn svg {
+    margin-left: 10px;
+  }
+  
+  /* Order list styling */
+  .order-list {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #e0f2f1, #b9fbc0, #a6fdae, #6ae9e2);/* Slightly transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Heading styling */
+  .order-list h2 {
+    font-size: 2rem;
+    color: #4caf50; /* Green color for heading */
+    margin-bottom: 15px;
+  }
+  
+  /* Order list items styling */
+  .order-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-item {
+    background: linear-gradient(135deg, #f9f5a8, #b9fbc1, #a6fdae, #6ae9e2); /* Light white background */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .order-item:hover {
+    background: linear-gradient(135deg, #f1ed9d, #b1faba, #9efda8, #65f2eb); /* Light grey background on hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Order info styling */
+  .order-info {
+    margin-bottom: 10px;
+  }
+  
+  /* Products info styling */
+  .products-info {
+    margin-top: 10px;
+  }
+  
+  .products-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-item {
+    background: #e8f5e9; /* Light green background */
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-item:hover {
+    background: #c8e6c9; /* Slightly darker green on hover */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #ff6b6b; /* Red color for error messages */
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  

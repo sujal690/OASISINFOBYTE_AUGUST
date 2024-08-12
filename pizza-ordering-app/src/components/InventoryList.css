@@ -1,0 +1,132 @@
+/* InventoryList.css */
+
+/* Container styling */
+.inventory-list {
+    background: linear-gradient(135deg, #d0f48d 0%, #92fdab 100%); /* Green gradient background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Custom font */
+    color: #2c3e50; /* Dark text color */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Animated background */
+  .inventory-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    animation: backgroundAnimation 5s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Heading styling */
+  .inventory-list h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #27ae60; /* Green color for heading */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; /* Ensure heading is above background */
+  }
+  
+  .inventory-list h2 .icon {
+    margin-right: 10px;
+    font-size: 2.5rem; /* Larger icon size */
+  }
+  
+  /* List styling */
+  .inventory-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .inventory-list li {
+    background: #ffffff; /* White background for list items */
+    border: 1px solid #dcdcdc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1; /* Ensure list items are above background */
+  }
+  
+  .inventory-list li:hover {
+    background: #f0f9f4; /* Light green on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+  }
+  
+  /* Item details container styling */
+  .inventory-list .item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inventory-list .item-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #27ae60; /* Green color for item name */
+  }
+  
+  .inventory-list .item-quantity {
+    color: #2c3e50; /* Dark text color for quantity */
+  }
+  
+  /* Remove button styling */
+  .inventory-list .remove-btn {
+    background: #e74c3c; /* Red background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 6px; /* Slightly rounded corners */
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .inventory-list .remove-btn:hover {
+    background: #c0392b; /* Darker red on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .inventory-list .remove-btn .fa-trash-alt {
+    margin-right: 5px;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c; /* Red color for errors */
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px;
+    z-index: 1; /* Ensure error message is above background */
+  }
+  

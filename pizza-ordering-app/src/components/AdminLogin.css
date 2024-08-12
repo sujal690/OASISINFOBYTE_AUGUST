@@ -1,0 +1,136 @@
+/* AdminLogin.css */
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap);
+/* Form Container */
+.admin-login {
+    background: linear-gradient(135deg, #f7b42c, #fc575e); /* Vibrant gradient background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 40px;
+    max-width: 450px;
+    margin: 80px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Depth with shadow */
+    position: relative; /* For pseudo-elements positioning */
+    overflow: hidden; /* Hide overflow for pseudo-elements */
+    text-align: center; /* Center align text */
+    font-family: 'Roboto', sans-serif; /* Custom font */
+  }
+  
+  /* Animated Background Shapes */
+  .admin-login::before,
+  .admin-login::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+    width: 300px;
+    height: 300px;
+    transition: all 0.8s ease;
+  }
+  
+  .admin-login::before {
+    top: -150px;
+    left: -150px;
+    transform: scale(1.6);
+  }
+  
+  .admin-login::after {
+    bottom: -150px;
+    right: -150px;
+    transform: scale(1.4);
+  }
+  
+  .admin-login:hover::before {
+    transform: scale(1.8);
+  }
+  
+  .admin-login:hover::after {
+    transform: scale(1.6);
+  }
+  
+  /* Form Elements */
+  .admin-login div {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .admin-login label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #fff; /* White label text */
+    font-weight: 500;
+  }
+  
+  .admin-login input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 14px 16px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.8); /* Slightly opaque background */
+    color: #333; /* Dark text color */
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    position: relative;
+    z-index: 1; /* Ensure it’s above the pseudo-elements */
+    font-family: 'Poppins', sans-serif; /* Custom font */
+  }
+  
+  .admin-login input::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Placeholder text color */
+    font-style: italic; /* Italic placeholder text */
+    transition: color 0.3s ease; /* Smooth transition for placeholder color */
+  }
+  
+  .admin-login input:focus {
+    background: rgba(255, 255, 255, 1); /* Fully opaque background on focus */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+    transform: scale(1.02); /* Slightly enlarge input on focus */
+    border: 2px solid #fc575e; /* Vibrant border color on focus */
+    color: #333; /* Dark text color on focus */
+    font-weight: bold; /* Bold text on focus */
+    font-size: 1.1rem; /* Slightly larger text on focus */
+  }
+  
+  /* Button Styling */
+  .admin-login button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: linear-gradient(135deg, #ff6f61, #de5d83); /* Gradient background */
+    color: #fff; /* White text color */
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1; /* Ensure it’s above the pseudo-elements */
+  }
+  
+  .admin-login button:hover {
+    background: linear-gradient(135deg, #f54242, #d9345a); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  }
+  
+  /* Error Message */
+  .admin-login .error-message {
+    color: #ff4c4c; /* Red color for error messages */
+    font-size: 0.875rem;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-out; /* Fade-in animation for error messages */
+  }
+  
+  /* Keyframes for error message fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

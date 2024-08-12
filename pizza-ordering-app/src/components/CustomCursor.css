@@ -1,0 +1,15 @@
+/* CustomCursor.css */
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF4500; /* Example color */
+    position: fixed;
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s ease, width 0.2s ease, height 0.2s ease;
+    z-index: 10000; /* Ensure the cursor is above all other elements */
+  }
+  

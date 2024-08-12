@@ -1,0 +1,138 @@
+/* UpdateInventory.css */
+
+/* Container styling */
+.update-inventory {
+    position: relative;
+    background: #e0f2f1; /* Light green background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Custom font */
+    color: #2c3e50; /* Dark text color */
+    overflow: hidden;
+  }
+  
+  /* Heading styling */
+  .update-inventory h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #2e8b57; /* Dark green color for heading */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; /* Ensure heading is above background */
+  }
+  
+  .update-inventory h2 .icon {
+    margin-right: 10px;
+    font-size: 2.5rem; /* Larger icon size */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; /* Ensure label is above background */
+  }
+  
+  /* Label styling */
+  .update-inventory label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  
+  /* Label icons */
+  .update-inventory .label-icon {
+    font-size: 1.2rem;
+    color: #2e8b57; /* Dark green color for icons */
+    margin-bottom: 5px;
+  }
+  
+  /* Select input styling */
+  .select-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    color: #333; /* Dark text color */
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin-top: 5px;
+  }
+  
+  /* Quantity input styling */
+  .quantity-input {
+    width: 96.5%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    color: #333; /* Dark text color */
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin-top: 5px;
+  }
+  
+  /* Input focus effects */
+  .select-input:focus, .quantity-input:focus {
+    background: rgba(171, 251, 182, 0.47); /* Fully opaque background on focus */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+    transform: scale(1.02); /* Slightly enlarge input on focus */
+  }
+  
+  /* Button styling */
+  .update-btn {
+    background: #2e8b57; /* Dark green background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .update-btn:hover {
+    background: #1d6f43; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Background animation */
+  .update-inventory::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 128, 0, 0.2));
+    animation: backgroundAnimation 30s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  

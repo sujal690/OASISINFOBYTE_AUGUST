@@ -1,0 +1,120 @@
+/* Header Styles */
+header {
+  background: transparent; /* Semi-transparent black for overlay effect */
+  padding: 20px 50px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure header stays above other elements */
+  box-shadow: transparent; /* Adding shadow for depth */
+  backdrop-filter: none; /* Glassmorphism effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+nav ul li {
+  position: relative;
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FFD700; /* Bright gold color for links */
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Vibrant gradient */
+  border-radius: 30px; /* Rounded edges */
+  box-shadow: 0px 0px 15px rgba(255, 126, 95, 0.7), 0px 0px 30px rgba(254, 180, 123, 0.4);
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+nav ul li a:hover {
+  color: #fff; /* White text on hover */
+  background: linear-gradient(135deg, #ff6a6a, #ff9a8b); /* Light gradient on hover */
+  text-shadow: 0 0 8px #fff, 0 0 16px #ff9a8b; /* Glow effect */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+nav ul li a::before, nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ff9a8b;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff9a8b, 0 0 20px #ff6a6a;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+nav ul li a::before {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a::after {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::before, nav ul li a:hover::after {
+  opacity: 1;
+}
+
+/* Admin Link */
+nav ul li a[href="/AdminLogin"] {
+  color: #FF4500;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff7e5f, #ff6a6a); /* Distinct gradient for Admin */
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+nav ul li a[href="/AdminLogin"]:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #ff4500, #ff6347); /* Stronger gradient on hover */
+  text-shadow: 0 0 8px #fff, 0 0 16px #ff6347;
+  z-index: 1001; /* Ensure buttons are above other elements */
+}
+
+/* Logo */
+.logo {
+  font-family: 'Pacifico', cursive; /* Fancy logo font */
+  font-size: 35px;
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #ff7e5f;
+  cursor: pointer;
+  margin-right: auto;
+  z-index: 1002; /* Ensure logo is above buttons */
+}
+
+.logo:hover {
+  color: #fff;
+  text-shadow: 0 0 20px #FFD700, 0 0 30px #ff7e5f;
+}
+
+/* Glowing Cursor */
+body {
+  cursor: none;
+}
+
+
